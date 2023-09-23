@@ -257,7 +257,7 @@ function WatchedMovies({ movie, deleteWatched }) {
 
 function MovieDetail({ id, onClose, watched, setWatch, rating, setRating }) {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+
   const key = "e8dcccca";
   const [movie, setMovie] = useState({});
   const [ratedMovie] = watched?.filter(movie => movie.imdbID === id);
@@ -266,7 +266,6 @@ function MovieDetail({ id, onClose, watched, setWatch, rating, setRating }) {
     function () {
       async function getMovie() {
         try {
-          setError("");
           setIsLoading(true);
           const res = await fetch(
             `http://www.omdbapi.com/?apikey=${key}&i=${id}`
@@ -278,7 +277,7 @@ function MovieDetail({ id, onClose, watched, setWatch, rating, setRating }) {
           if (data.Response === "False") throw new Error("movie not found");
           setMovie(data);
         } catch (err) {
-          setError(err.message);
+          console.log(err.message);
         } finally {
           setIsLoading(false);
         }
