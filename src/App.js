@@ -268,7 +268,7 @@ function MovieDetail({ id, onClose, watched, setWatch, rating, setRating }) {
         try {
           setIsLoading(true);
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${key}&i=${id}`
+            `https://www.omdbapi.com/?apikey=${key}&i=${id}`
           );
           if (!res.ok) throw new Error("movie not found");
 

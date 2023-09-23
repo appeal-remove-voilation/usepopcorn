@@ -13,7 +13,7 @@ export function useMovies(query) {
           setIsLoading(true);
           if (query.length < 3) return;
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${key}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${key}&s=${query}`,
             { signal: controller.signal }
           );
           if (!res.ok) throw new Error("movie not found");
