@@ -349,7 +349,7 @@ function Button({ handleClick, children }) {
   );
 }
 
-function MainBox({}) {
+function MainBox() {
   return (
     <div id="main-form">
       <header id="main-form__header">
