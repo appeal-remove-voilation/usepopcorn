@@ -414,7 +414,14 @@ function MainBox() {
             required
           />
           <br />
-
+          <label for="text" id="label">
+            Confirm Password
+          </label>
+          <input id="input" type="text" name="subject" required />
+          <div class="visibility">
+            <span class="visibility-pw">Visibility on</span>
+          </div>
+          <br />
           <br />
           <div id="btn-div" class="btn-div">
             <button class="btn" type="submit" onclick="sendEmail()">
