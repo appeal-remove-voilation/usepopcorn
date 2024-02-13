@@ -27,6 +27,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-background-900);
   padding: 2.4rem;
+  backdrop-filter: blur(20px);
 }
 
 /* ******* */
@@ -354,6 +355,77 @@ body {
   justify-content: center;
 }
 
+#main-form {
+  position: fixed;
+  z-index: 1000;
+  margin: 0;
+  padding: 20px; /* Add padding for content */
+
+  width: 2000px; /* Adjust size as needed */
+  /* Set a maximum width if needed */
+  height: 120vh; /* Adjust height as needed */
+  max-height: 2000px; /* Set a maximum height if needed */
+  background-color: white;
+  overflow: auto; /* Allow scrolling if content exceeds dimensions */
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#main-form__header {
+  color: black;
+  text-align: center;
+  margin-top: 100px;
+}
+#main-form__h3 {
+  color: rgb(21, 77, 232);
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+#main-form__body p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  color: black;
+  text-align: center;
+}
+#myForm {
+  text-align: center;
+  margin: auto;
+  width: 800px;
+}
+#main-form #label {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  color: #2b3035;
+}
+#main-form #input {
+  padding: 10px;
+  width: 500px;
+  border-radius: 4px;
+}
+#form-h3-el {
+  color: black;
+}
+#btn-div {
+  background-color: #adb5bd;
+  padding: 20px;
+  width: 800px;
+  text-align: right;
+}
+#btn-div .btn {
+  color: white;
+  background-color: #2f40ff;
+  font-weight: bold;
+  font-size: 19px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  /* width: 800px; */
+}
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128

