@@ -371,7 +371,7 @@ function MainBox() {
         <p class="video__p">Detailed Video Information</p>
         <a
           target="_blank"
-          onclick="myFunction()"
+          rel="noopener noreferrer"
           class="video"
           href="https://detailed-video-29b30.web.app/detailed%20video.mp4"
         >
